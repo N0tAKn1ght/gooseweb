@@ -10,7 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "expresss": "^0.0.0",
+    "express": "^0.0.0",
     "pg-promise": "^10.10.1"
   },
   "engines": {
