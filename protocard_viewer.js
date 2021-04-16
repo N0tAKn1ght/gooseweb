@@ -20,7 +20,7 @@ app.set('view engine', 'ejs');
 app.use(express.static(__dirname + '/'));
 
 app.get('/', function(req,res){
-    res.render('home.html');
+    res.render('home');
 });
 app.get('/about', function(req,res){
     res.render('about');
