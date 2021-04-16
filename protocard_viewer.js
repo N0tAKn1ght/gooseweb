@@ -19,8 +19,8 @@ dbConfig.connect()
 app.set('view engine', 'ejs');
 app.use(express.static(__dirname + '/'));
 
-app.get('/home', function(req,res){
-    res.render('home');
+app.get('/', function(req,res){
+    res.render('home.html');
 });
 app.get('/about', function(req,res){
     res.render('about');
