@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <title>GoosebotHome</title>
         <meta charset="utf-8">
@@ -16,9 +16,12 @@
         <!-- Latest compiled JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-        <!-- Links my CSS file -->
-        <link href="../resources/web_style.css" rel="stylesheet">
-            <!-- Navigation Bar -->
+        <!-- Link my js file -->
+        <script type="text/javascript" src="../resources/web_scripts.js"></script>
+
+    </head>
+    <body onload="loadCreators()">
+        <!-- Navigation Bar -->
         <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-brand">
@@ -50,31 +53,47 @@
                 </button>
             </nav>
         </div>
-    </head>
-    <body>
-        
-        <div class="wrap">
-  
-            <div class="gooseh"></div>
-            <div class="box">
-                    <h2>Welcome to the Gooseneck Bot </h2>
-                <div class="centerB">
-                    <a href="https://discord.com/api/oauth2/authorize?client_id=808415889875664927&permissions=2148001856&scope=bot" type="button" class="btn btn-dark btn-lg active" role="button" aria-pressed="true">Invite the Bot</a>
+
+        <!-- New cards -->
+        <div class="container">
+            <br>
+            <div class="row">
+                <div class="col-4">
+                    <div class="card">
+                        <img class="card-img-top" id="member_img" src="../resources/img/goose_face.jpg" alt="placeholder">
+                        <div class="card-body mx-auto">
+                            <h5 class="card-title">
+                                <span id="m_name"></span>
+                            </h5>
+                            <div class="dropdown">
+                                <button class="btn btn-primary dropdown-toggle" type="button" id = "selectMember" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Select a Member
+                                </button>
+                                <div id="member_selector" class="dropdown-menu" aria-labelledby="selectMemberBtn"></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            
-                <p>
-                    Alright, Ducklings this is what the Gooseneck bot is all about!
-                </p>
-                <p>
-                    It has a gacha game involving video characters. 
-                </p>
-                <p>
-                    In order to find out more about this bot please navigate to the commands tab above to learn more about the bot.
-                    If you wanna learn more about the creators go to the about tab.
-                </p>
-                
+                <!-- post description -->
+                <div class="col-8">
+                    <div class="table-responsive">
+                        <table class="table">
+                            <tr>
+                                <th> Year </th>
+                                <td><span id="m_year"></span></td>
+                            </tr>
+                            <tr>
+                                <th>Major</th>
+                                <td><span id="m_major"></span></td>
+                            </tr>
+                            <tr>
+                                <th>Info</th>
+                                <td><span id="m_info"></span></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
             </div>
         </div>
-
     </body>
 </html>
